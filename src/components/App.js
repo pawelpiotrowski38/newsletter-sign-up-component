@@ -1,15 +1,7 @@
 import NewsletterSignUp from "./NewsletterSignUp";
-import '../styles.css';
-import { useState } from "react";
 
-function App() {
-    const [email, setEmail] = useState("");
-
+export default function App() {
     return (
-        <main className="main">
-            <NewsletterSignUp email={email} setEmail={setEmail}/>
-        </main>
+        <NewsletterSignUp />
     );
 }
-
-export default App;

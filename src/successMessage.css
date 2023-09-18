@@ -1,0 +1,42 @@
+.success-message {
+    width: 100%;
+    padding: 9.25rem 1.5rem 1.5rem 1.5rem;
+    background-color: var(--white);
+}
+
+.success-message__title {
+    margin-top: 2.125rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark-slate-grey);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.success-message__p {
+    margin-bottom: 15rem;
+}
+
+.success-message__p span {
+    color: var(--dark-slate-grey);
+    font-weight: 700;
+}
+
+@media screen and (min-width: 31.5em) {
+    .success-message {
+        max-width: 31.5em;
+        padding: 4rem;
+        padding-top: 3rem;
+        border-radius: 2.25rem;
+        overflow: hidden;
+        box-shadow: 0 15px 40px var(--dark-slate-grey);
+    }
+
+    .success-message__title {
+        font-size: 3.5rem;
+    }
+
+    .success-message__p {
+        margin-bottom: 1rem;
+    }
+}

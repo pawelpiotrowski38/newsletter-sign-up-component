@@ -34,7 +34,49 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 0;
 }
 
-@media screen and (min-width: 58em) {
+.button {
+    position: relative;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding-top: 1.3125rem;
+    padding-bottom: 1.125rem;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease-in-out;
+    letter-spacing: 0.3px;
+}
+
+.button::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, var(--pink), var(--tomato));
+    z-index: -1;
+    transition: opacity 0.25s ease-in-out;
+    opacity: 0;
+}
+
+.button:hover::before {
+    opacity: 1;
+}
+
+.button:hover {
+    box-shadow: 0 15px 20px hsla(4, 100%, 67%, 0.4);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 31.5em) {
     body {
         display: flex;
         justify-content: center;
