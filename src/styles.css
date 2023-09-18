@@ -47,11 +47,20 @@
 }
 
 .newsletter-sign-up__label-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 0.375rem;
 }
 
 .newsletter-sign-up__label {
     color: var(--dark-slate-grey);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.newsletter-sign-up__error {
+    color: var(--tomato);
     font-size: 0.75rem;
     font-weight: 700;
 }
@@ -67,6 +76,12 @@
     transition: border 0.2s ease-in-out;
 }
 
+.newsletter-sign-up__input--error {
+    border-color: var(--tomato);
+    background-color: var(--tomato-alpha);
+    color: var(--tomato);
+}
+
 .newsletter-sign-up__input:hover {
     border-color: var(--dark-slate-grey);
     cursor: pointer;
@@ -76,7 +91,7 @@
     border-color: var(--dark-slate-grey);
 }
 
-.newsletter-sign-up__button {
+.button {
     position: relative;
     width: 100%;
     margin-top: 1.5rem;
@@ -95,7 +110,7 @@
     transition: box-shadow 0.2s ease-in-out;
 }
 
-.newsletter-sign-up__button::before {
+.button::before {
     position: absolute;
     content: '';
     top: 0;
@@ -139,11 +154,11 @@
         margin-top: 0.0625rem;
     }
 
-    .newsletter-sign-up__button:hover::before {
+    .button:hover::before {
         opacity: 1;
     }
 
-    .newsletter-sign-up__button:hover {
+    .button:hover {
         box-shadow: 0 15px 20px hsla(4, 100%, 67%, 0.4);
         cursor: pointer;
     }

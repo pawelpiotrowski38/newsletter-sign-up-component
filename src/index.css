@@ -2,6 +2,7 @@
 
 :root {
     --tomato: hsl(4, 100%, 67%);
+    --tomato-alpha: hsla(4, 100%, 67%, 0.15);
     --pink: hsl(347, 100%, 66%);
     --dark-slate-grey: hsl(234, 29%, 20%);
     --charcoal-grey: hsl(235, 18%, 26%);

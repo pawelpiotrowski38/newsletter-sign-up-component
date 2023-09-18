@@ -1,4 +1,25 @@
-export default function NewsletterSignUp() {
+import { useState } from "react";
+
+export default function NewsletterSignUp({email, setEmail}) {
+    const [error, setError] = useState("");
+
+    const handleEmailChange = function(event) {
+        setEmail(event.target.value);
+    }
+
+    const handleSubmit = function(event) {
+        event.preventDefault();
+
+        const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+        if (!emailRegex.test(email)) {
+            setError("Valid email required");
+            return;
+        } else {
+            console.log("validation passed");
+        }
+    }
+
     return (
         <section className="newsletter-sign-up">
             <div className="newsletter-sign-up__image-container">
@@ -41,18 +62,23 @@ export default function NewsletterSignUp() {
                         <p className="newsletter-sign-up__container-p">And much more!</p>
                     </li>
                 </ul>
-                <form className="newsletter-sign-up__form">
+                <form className="newsletter-sign-up__form" onSubmit={handleSubmit}>
                     <div className="newsletter-sign-up__label-container">
                         <label className="newsletter-sign-up__label" htmlFor="email">Email address</label>
+                        {error && (
+                            <p className="newsletter-sign-up__error">{error}</p>
+                        )}
                     </div>
                     <input
-                        className="newsletter-sign-up__input"
+                        className={`newsletter-sign-up__input ${error ? 'newsletter-sign-up__input--error' : ''}`}
                         type="text"
                         id="email"
                         name="email"
                         placeholder="email@company.com"
+                        value={email}
+                        onChange={handleEmailChange}
                     />
-                    <button className="newsletter-sign-up__button">Subscribe to monthly newsletter</button>
+                    <button className="button">Subscribe to monthly newsletter</button>
                 </form>
             </div>
         </section>
