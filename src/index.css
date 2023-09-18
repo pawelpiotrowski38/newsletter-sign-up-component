@@ -2,6 +2,7 @@
 
 :root {
     --tomato: hsl(4, 100%, 67%);
+    --pink: hsl(347, 100%, 66%);
     --dark-slate-grey: hsl(234, 29%, 20%);
     --charcoal-grey: hsl(235, 18%, 26%);
     --grey: hsl(231, 7%, 60%);
@@ -18,13 +19,11 @@ html {
 }
 
 body {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     height: 100vh;
     margin: 0;
     padding: 0;
     line-height: 1.5;
+    background-color: var(--white);
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
 }
@@ -32,4 +31,13 @@ body {
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
+}
+
+@media screen and (min-width: 58em) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--charcoal-grey);
+    }
 }

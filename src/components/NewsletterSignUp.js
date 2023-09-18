@@ -2,11 +2,15 @@ export default function NewsletterSignUp() {
     return (
         <section className="newsletter-sign-up">
             <div className="newsletter-sign-up__image-container">
-                <img 
+                <picture>
+                    <source srcSet="/images/illustration-sign-up-desktop.svg" media="(min-width: 58em)" />
+                    <img className="newsletter-sign-up__image" src="/images/illustration-sign-up-mobile.svg"  alt="sign-up" />
+                </picture>
+                {/* <img 
                     className="newsletter-sign-up__image"
                     src="/images/illustration-sign-up-mobile.svg" 
                     alt="sign-up"
-                />
+                /> */}
             </div>
             <div className="newsletter-sign-up__container">
                 <h1 className="newsletter-sign-up__container-title">Stay updated!</h1>

@@ -1,11 +1,9 @@
-.main {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
 .newsletter-sign-up {
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start; */
     width: 100%;
+    background-color: var(--white);
 }
 
 .newsletter-sign-up__image {
@@ -61,15 +59,29 @@
 .newsletter-sign-up__input {
     width: 100%;
     padding: 1.0625rem 1.5rem;
+    outline: none;
     border: 0.0625rem solid var(--grey);
     border-radius: 0.5rem;
+    color: var(--dark-slate-grey);
     font-size: 1rem;
+    transition: border 0.2s ease-in-out;
+}
+
+.newsletter-sign-up__input:hover {
+    border-color: var(--dark-slate-grey);
+    cursor: pointer;
+}
+
+.newsletter-sign-up__input:focus {
+    border-color: var(--dark-slate-grey);
 }
 
 .newsletter-sign-up__button {
+    position: relative;
     width: 100%;
     margin-top: 1.5rem;
-    padding: 1.25rem 0;
+    padding-top: 1.3125rem;
+    padding-bottom: 1.125rem;
     outline: none;
     border: none;
     border-radius: 0.5rem;
@@ -78,4 +90,61 @@
     font-size: 0.875rem;
     font-weight: 700;
     text-align: center;
+    z-index: 1;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.newsletter-sign-up__button::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, var(--pink), var(--tomato));
+    z-index: -1;
+    transition: opacity 0.25s ease-in-out;
+    opacity: 0;
+  }
+
+@media screen and (min-width: 58em) {
+    .newsletter-sign-up {
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 58em;
+        border-radius: 2.25rem;
+        overflow: hidden;
+        box-shadow: 0 15px 40px var(--dark-slate-grey);
+    }
+
+    .newsletter-sign-up__image-container {
+        padding: 1.5rem;
+    }
+
+    .newsletter-sign-up__image {
+        width: 400px;
+    }
+
+    .newsletter-sign-up__container {
+        padding: 5.1875rem 2.5rem 0 4rem;
+    }
+
+    .newsletter-sign-up__container-title {
+        margin-bottom: 0.625rem;
+        font-size: 3.5rem;
+    }
+
+    .newsletter-sign-up__container-point-icon {
+        margin-top: 0.0625rem;
+    }
+
+    .newsletter-sign-up__button:hover::before {
+        opacity: 1;
+    }
+
+    .newsletter-sign-up__button:hover {
+        box-shadow: 0 15px 20px hsla(4, 100%, 67%, 0.4);
+        cursor: pointer;
+    }
 }
