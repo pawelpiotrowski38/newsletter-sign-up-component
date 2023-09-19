@@ -26,7 +26,7 @@ export default function NewsletterSignUp() {
     }
 
     return (
-        <main>
+        <main className="main">
             {isSubmitted ? (
                 <SuccessMessage email={email} setIsSubmitted={setIsSubmitted} setEmail={setEmail}/>
             ) : (

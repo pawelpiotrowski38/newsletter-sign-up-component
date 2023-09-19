@@ -14,7 +14,7 @@
 }
 
 .success-message__p {
-    margin-bottom: 15rem;
+    margin-bottom: 14.875rem;
 }
 
 .success-message__p span {
@@ -23,6 +23,10 @@
 }
 
 @media screen and (min-width: 31.5em) {
+    main {
+        align-items: center;
+    }
+
     .success-message {
         max-width: 31.5em;
         padding: 4rem;
