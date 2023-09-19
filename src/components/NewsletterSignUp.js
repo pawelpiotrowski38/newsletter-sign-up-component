@@ -1,6 +1,6 @@
 import { useState } from "react";
 import SuccessMessage from "./SuccessMessage";
-import '../newsletterSignUp.css';
+import '../styles/newsletterSignUp.css';
 
 export default function NewsletterSignUp() {
     const [email, setEmail] = useState("");

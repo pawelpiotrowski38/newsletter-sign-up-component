@@ -1,4 +1,4 @@
-import '../successMessage.css';
+import '../styles/successMessage.css';
 
 export default function SuccessMessage({email, setIsSubmitted, setEmail}) {
 
