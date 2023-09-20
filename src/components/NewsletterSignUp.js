@@ -16,13 +16,17 @@ export default function NewsletterSignUp() {
 
         const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
+        if (email.length === 0) {
+            setError("Email required");
+            return;
+        }
         if (!emailRegex.test(email)) {
             setError("Valid email required");
             return;
-        } else {
-            setError("");
-            setIsSubmitted(true);
         }
+
+        setError("");
+        setIsSubmitted(true);
     }
 
     return (
